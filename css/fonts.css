@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Poppins-regular.woff2") format("woff2"), 
+       url("../fonts/Poppins-regular.woff") format("woff"),
+       url("../fonts/Poppins-regular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Poppins-medium.woff2") format("woff2"), 
+       url("../fonts/Poppins-medium.woff") format("woff"),
+       url("../fonts/Poppins-medium.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Poppins-bold.woff2") format("woff2"), 
+       url("../fonts/Poppins-bold.woff") format("woff"),
+       url("../fonts/Poppins-bold.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "RammettoOne";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/RammettoOne-Regular.ttf") format("woff"),
+}

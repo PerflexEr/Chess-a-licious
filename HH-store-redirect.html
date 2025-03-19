@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6N2FVEB3N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-G6N2FVEB3N');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Horses Store Redirect</title>
+
+	<!-- custom - css include -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+
+<a href="https://grouper.games"><img src="./images/Icon.png" alt="Example Image" width="200"></a>
+
+<p><a class="glow" href="https://apps.apple.com/ua/app/hungry-horses-chess-puzzles/id6479247240">App Store for iOS</a></p>
+
+<p><a class="glow" href="https://play.google.com/store/apps/details?id=com.storytellerstudio.knightstour">Android - Play Store</a></p>
+
+
+    <script>
+        // Function to redirect after a delay
+        function delayedRedirect() {
+            setTimeout(function() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                // Redirect for iPhone users
+                if (/iPad|iPhone|iPOD/.test(userAgent) && !window.MSStream) {
+                    window.location.href = 'https://apps.apple.com/ua/app/hungry-horses-chess-puzzles/id6479247240';
+                }
+                if (/android/i.test(userAgent)) {
+                    // Redirect URL for Android users
+                    window.location.href = 'https://play.google.com/store/apps/details?id=com.storytellerstudio.knightstour';
+                }
+            }, 0); // 1000 milliseconds = 1 seconds
+        }
+        
+        // Call the delayedRedirect function when the page loads
+        window.onload = delayedRedirect;
+    </script>
+
+
+    <p style="font-size: 0.7em;"><br/><br/><br/><a href="https://grouper.games/privacy.html">privacy policy</a></p>
+</body>
+</html>
