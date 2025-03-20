@@ -15,13 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
       testimonial.classList.toggle("active", i === index);
     });
 
-
     const activeSlide = testimonials[index];
-    container.style.height = `${activeSlide.offsetHeight}px`;
+    container.style.height = `${activeSlide.offsetHeight + 15}px`;
     container.style.transform = `translateX(-${index * 100}%)`;
+
+    if (index === 0) {
+      container.style.paddingBottom = "36px";
+    } else {
+      container.style.paddingBottom = "0";
+    }
 
     resetTimer();
   }
+
 
   function startAutoSlide() {
     clearInterval(interval);

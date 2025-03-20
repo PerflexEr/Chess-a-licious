@@ -650,11 +650,12 @@ img {
     gap: 16px;
   }
 }
+
 .testimonial-slider {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  margin: 25px 0;
+  margin: 25px 0 15px;
   font-family: "Poppins";
   font-weight: 500;
 }
@@ -834,6 +835,7 @@ img {
 
   .testimonial-author {
     font-size: 18px;
+    padding-bottom: 36px;
   }
 }
 
@@ -847,7 +849,6 @@ img {
     padding-top: 25px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-bottom: 18px;
     min-height: 220px;
   }
 
