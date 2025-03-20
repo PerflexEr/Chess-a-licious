@@ -4,35 +4,40 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0;
   let interval;
 
-  // Function to move to a specific slide
+  function getSlideDuration(index) {
+    const textLength =
+      testimonials[index].querySelector(".testimonial-text").textContent.length;
+    return Math.min(Math.max(textLength * 100, 3000), 12000); 
+  }
+
   function goToSlide(index) {
     testimonials.forEach((testimonial, i) => {
       testimonial.classList.toggle("active", i === index);
     });
+
+
+    const activeSlide = testimonials[index];
+    container.style.height = `${activeSlide.offsetHeight}px`;
     container.style.transform = `translateX(-${index * 100}%)`;
+
+    resetTimer();
   }
 
-  // Auto-advance slides every 10 seconds
   function startAutoSlide() {
-    interval = setInterval(() => {
+    clearInterval(interval);
+    interval = setTimeout(() => {
       currentIndex = (currentIndex + 1) % testimonials.length;
       goToSlide(currentIndex);
-    }, 10000);
+    }, getSlideDuration(currentIndex));
   }
 
-  // Reset timer when manually changing slides
   function resetTimer() {
-    clearInterval(interval);
     startAutoSlide();
   }
 
-  // Initialize first slide as active
   goToSlide(0);
-
-  // Initialize auto-slide
   startAutoSlide();
 
-  // Add touch/swipe support for mobile
   let touchStartX = 0;
   let touchEndX = 0;
 
@@ -56,15 +61,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleSwipe() {
     const swipeThreshold = 50;
     if (touchStartX - touchEndX > swipeThreshold) {
-      // Swipe left
       currentIndex = Math.min(currentIndex + 1, testimonials.length - 1);
       goToSlide(currentIndex);
-      resetTimer();
     } else if (touchEndX - touchStartX > swipeThreshold) {
-      // Swipe right
       currentIndex = Math.max(currentIndex - 1, 0);
       goToSlide(currentIndex);
-      resetTimer();
     }
   }
 });

@@ -650,50 +650,63 @@ img {
     gap: 16px;
   }
 }
-
 .testimonial-slider {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
   margin: 25px 0;
-  font-family:  "Poppins";
+  font-family: "Poppins";
   font-weight: 500;
 }
 
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease;
+  align-items: stretch; 
+}
+
+.testimonial {
+  height: fit-content;
+  flex: 0 0 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  width: 100%;
+  padding: 46px 98px 36px 98px;
+  box-sizing: border-box;
+  min-height: auto;
 }
 
 .testimonial.active {
   opacity: 1;
   visibility: visible;
-}
-.testimonial {
-  flex: 0 0 100%;
-  color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 300px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-  width: 100%;
-  padding-top: 46px;
-  padding-left: 98px;
-  padding-right: 112px;
-  padding-bottom: 36px;
 }
+
+.testimonial-phrase {
+  display: flex;
+  align-items: flex-start;
+  flex: 1; 
+}
+
 .testimonial-text {
   font-size: 25px;
-  line-height: 118.6;
+  line-height: 1.5; 
   margin-bottom: 20px;
   position: relative;
   padding-top: 8px;
-  word-wrap: break-word; /* Перенос длинных слов */
-  overflow-wrap: break-word; /* Современный вариант для break-word */
-  hyphens: auto; /* Автоматические переносы слов */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.testimonial-author {
+  margin-top: 10px;
+  font-weight: bold;
+  align-self: flex-end;
 }
 
 .testimonial:nth-child(1) {
