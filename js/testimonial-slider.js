@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const activeSlide = testimonials[index];
-    container.style.height = `${activeSlide.offsetHeight + 25}px`;
+    container.style.height = `${activeSlide.offsetHeight}px`;
     container.style.transform = `translateX(-${index * 100}%)`;
-
+    container.style.marginBottom = `25px`;
     resetTimer();
   }
 
