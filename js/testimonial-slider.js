@@ -19,12 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     container.style.height = `${activeSlide.offsetHeight + 25}px`;
     container.style.transform = `translateX(-${index * 100}%)`;
 
-    if (index === 0) {
-      container.style.paddingBottom = "36px";
-    } else {
-      container.style.paddingBottom = "0";
-    }
-
     resetTimer();
   }
 
